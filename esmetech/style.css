@@ -1,325 +1,230 @@
-/*
-Theme Name: Esmetech
-Theme URI: https://esmetech.com
-Author: Esmetech Team
-Author URI: https://esmetech.com
-Description: Tema personalizado para Esmetech con integración de IA y base de datos
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: esmetech
-*/
-
-:root {
-    --primary-color: #0066ff;
-    --secondary-color: #00cc88;
-    --dark-color: #1a1a2e;
-    --light-color: #f5f5f5;
-    --text-color: #333;
-    --border-radius: 8px;
-    --box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: #fff;
-}
-
-/* Header Styles */
-.site-header {
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
-    color: white;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--box-shadow);
-}
+/* =========================================
+   NUEVOS ESTILOS ESMETECH - BARRA SUPERIOR Y MENÚ
+   ========================================= */
 
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
-.site-header .container {
+/* BARRA SUPERIOR */
+.top-bar-esmetech {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 8px 0;
+    font-size: 13px;
+    position: relative;
+    z-index: 1001;
+}
+
+.top-bar-esmetech .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.site-branding h1 {
-    font-size: 1.8rem;
-}
-
-.site-branding a {
-    color: white;
+.top-bar-left a,
+.top-bar-right a {
+    color: #94a3b8;
     text-decoration: none;
-}
-
-.main-navigation ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.main-navigation a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+    margin-right: 20px;
     transition: color 0.3s;
 }
 
-.main-navigation a:hover {
-    color: var(--secondary-color);
+.top-bar-left a:hover,
+.top-bar-right a:hover {
+    color: #4f46e5;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
-    color: white;
-    padding: 150px 0 80px;
-    text-align: center;
+.top-bar-left span {
+    margin-right: 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: all 0.3s;
+.idioma {
     cursor: pointer;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow);
-}
-
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: white;
-    color: var(--primary-color);
-}
-
-/* Cards Section */
-.cards-section {
-    padding: 60px 0;
-    background-color: var(--light-color);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    color: var(--dark-color);
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: white;
-    border-radius: var(--border-radius);
-    padding: 30px;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.card p {
-    color: var(--text-color);
-}
-
-/* Chatbot Styles */
-.chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* HEADER PRINCIPAL */
+.header-esmetech {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-.chatbot-toggle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    box-shadow: var(--box-shadow);
-    transition: all 0.3s;
+.header-esmetech .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.chatbot-toggle:hover {
-    transform: scale(1.1);
+.logo img {
+    max-height: 50px;
+    width: auto;
 }
 
-.chatbot-window {
+/* MENÚ PRINCIPAL */
+.main-nav {
+    display: flex;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.main-menu > li > a {
+    display: block;
+    padding: 10px 0;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.main-menu > li > a:hover {
+    color: #4f46e5;
+}
+
+/* SUBMENÚS */
+.main-menu li {
+    position: relative;
+}
+
+.main-menu li ul {
     position: absolute;
-    bottom: 80px;
-    right: 0;
-    width: 350px;
-    height: 500px;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 240px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.main-menu li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-menu li ul li a {
+    padding: 8px 20px;
+    font-size: 13px;
+    color: #334155;
+    display: block;
+    text-decoration: none;
+}
+
+.main-menu li ul li a:hover {
+    background: #f1f5f9;
+    color: #4f46e5;
+}
+
+/* MENÚ MÓVIL */
+.menu-toggle {
     display: none;
     flex-direction: column;
-    overflow: hidden;
-}
-
-.chatbot-window.active {
-    display: flex;
-}
-
-.chatbot-header {
-    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-}
-
-.chatbot-messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 15px;
-    background-color: #f9f9f9;
-}
-
-.chatbot-messages div {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    border-radius: 8px;
-}
-
-.chatbot-messages div:first-child {
-    background: #e3f2fd;
-}
-
-.chatbot-input-area {
-    display: flex;
-    padding: 10px;
-    border-top: 1px solid #eee;
-    background: white;
-}
-
-.chatbot-input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-.chatbot-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.chatbot-send {
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
 }
 
-.chatbot-send:hover {
-    background-color: #0052cc;
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #1e293b;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
-/* Footer */
-.site-footer {
-    background-color: var(--dark-color);
-    color: white;
-    padding: 40px 0;
-    margin-top: 60px;
-    text-align: center;
-}
-
-.footer-content p {
-    margin: 5px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .site-header .container {
-        flex-direction: column;
-        gap: 1rem;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: flex;
     }
     
-    .main-navigation ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 80px 20px 20px;
+        transition: 0.3s;
+        z-index: 999;
+        overflow-y: auto;
     }
     
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .chatbot-window {
-        width: 300px;
-        height: 450px;
+    .main-nav.active {
         right: 0;
     }
     
-    .section-title {
-        font-size: 1.8rem;
+    .main-menu {
+        flex-direction: column;
+        gap: 0;
     }
+    
+    .main-menu > li > a {
+        padding: 12px 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .main-menu li ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        padding-left: 20px;
+        display: none;
+    }
+    
+    .main-menu li.active > ul {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-esmetech .container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .top-bar-left a,
+    .top-bar-left span,
+    .top-bar-right a,
+    .top-bar-right div {
+        margin: 0 8px;
+    }
+}
+
+/* MAIN CONTENT - ajuste para que no quede debajo del header fijo */
+.main-content {
+    min-height: 400px;
+}
+
+/* Ajuste para el hero que ya tenías */
+.hero {
+    margin-top: 0;
 }
